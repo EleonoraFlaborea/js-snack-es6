@@ -46,6 +46,11 @@ guests.forEach((guest, i)=> {
     
 })
 
+//correzione
+const guestList = guest.map((guest) => {
+  return {table: tableName, name: guest, place: i + 1}
+})
 
+console.log(guestList)
 
 

@@ -63,6 +63,9 @@ const excellentGrades = students.filter((student) => {
 
 console.log(excellentGrades);
 
+//destructuring
+//const excellentGrades = students.filter(({grades}) => grades > 70);
+
 //creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
 const gradesAndIds = students.filter((student) => {
   if (student.grades >= 70 && student.id >= 120) return true;
@@ -70,6 +73,7 @@ const gradesAndIds = students.filter((student) => {
 });
 
 console.log(gradesAndIds);
+
 
 //creare una lista contenente il loro nome tutto in maiuscolo 
 const UpperCaseNames = students.map(student => (student.name.toUpperCase()));
