@@ -30,23 +30,20 @@ let footballTeams = [
 ]
 
 //Genero numeri random al posto degli 0 nelle proprietà punti fatti e falli subiti.
-footballTeams.points = 0;
 
-for (let i = 0; i < footballTeams.length; i++){
- 
-  randomNumber = (Math.floor(Math.random()* 100)+1);
-  let newPoints = randomNumber;
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min +1) + min);
 
-  //footballTeams.push({points: newPoints})
-  //console.log(randomNumber)
-  
-  //footballTeams.push{points: newPoints}
-  //footballTeams.points = newPoints;
+footballTeams.forEach(footballTeam => {
+  footballTeam.points = getRandomNumber (0,100);
+  footballTeam.fouls = getRandomNumber (0,100);
 
-  
-  //console.log(footballTeams)
-}
+});
 
-console.log()
+console.log(footballTeams)
 
 //creo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console
+
+const newArray = footballTeams.map(footballTeam => {
+  const {name, fouls} = footballTeam
+  return {name, fouls};
+})
