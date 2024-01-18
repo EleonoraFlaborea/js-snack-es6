@@ -25,6 +25,20 @@ const bikes = [
 
 //stampo in console la bici con peso minore
 
-const min = Math.min(...bikes.map(item => item.weight))
-console.log(min)
+let lightestBike = bikes [0];
 
+for(let i = 0; i < bikes.length; i ++){
+  const bike = bikes[i];
+  if(bike.weight < lightestBike.weight) lightestBike = bike;
+}
+
+console.log(lightestBike)
+
+
+/*oppure
+
+bikes.forEach (({weight})=>{
+  if (weight < lightestBike.weight) lightestBike = bike;
+})
+
+console.log(lightestBike)*/
