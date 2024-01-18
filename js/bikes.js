@@ -37,7 +37,8 @@ console.log(lightestBike)
 
 /*oppure
 
-bikes.forEach (({weight})=>{
+bikes.forEach (bike =>{
+  const {weight} = bike
   if (weight < lightestBike.weight) lightestBike = bike;
 })
 
